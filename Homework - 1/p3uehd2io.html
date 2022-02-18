@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'>
+<link href='https://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet'>
+
+<body class="page-background">
+    <div class="top-margin"></div>
+    <div class="nav-bar">
+        <ul class="ul">
+            <li class="li"><a class="a" style="margin-left: 520px;" href="p3uehd2io.html">Home</a></li>
+            <li class="li"><a class="a" href="errorpage.html">Explore</a></li>
+            <li class="li"><a class="a" href="errorpage.html">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="main-background">
+        <h1 class="page-title">LA - The City of Angels</h1>
+    </div>
+    <div class="row">
+        <div class="attractions" ; style="margin-left: 200px">
+            <img src="images/griffith.jpg" ; class="center" , style="width: 100%; height: 210px; margin-left: 0px;">
+            <div id="section2-griffith" class="text-section">
+                <script>
+                    fetch("data.json")
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data.section2[0].text)
+                            var p = document.querySelector("#section2-griffith")
+                            p.innerText = p.innerText + "Griffith Observatory\n\n"
+                            p.innerText = p.innerText + data.section2[0].text
+                        })
+                </script>
+            </div>
+        </div>
+        <div class="attractions">
+            <img src="images/mountains.jpg" ; class="center" , style="width: 100%; height: 210px; margin-left: 0px">
+            <div id="section2-mountains" class="text-section">
+                <script>
+                    fetch("data.json")
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data.section2[1].text)
+                            var p = document.querySelector("#section2-mountains")
+                            p.innerText = p.innerText + "Mountains\n\n"
+                            p.innerText = p.innerText + data.section2[1].text
+                        })
+                </script>
+            </div>
+        </div>
+        <div class="attractions">
+            <img src="images/universalstudios.jpg" ; class="center" , style="width: 100%; height: 210px; margin-left: 0px">
+            <div id="section2-us" class="text-section">
+                <script>
+                    fetch("data.json")
+                        .then(response => response.json())
+                        .then(data => {
+                            console.log(data.section2[2].text)
+                            var p = document.querySelector("#section2-us")
+                            p.innerText = p.innerText + "Universal Studios\n\n"
+                            p.innerText = p.innerText + data.section2[2].text
+
+                        })
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="section3-background">
+        <div class="section3-class" id="section3">
+            <script>
+                fetch("data.json")
+                    .then(response => response.json())
+                    .then(data => {
+                        console.log(data.section3.text)
+                        var p = document.querySelector("#section3")
+                        p.innerText = p.innerText + data.section3.text[0]
+                        p.innerText = p.innerText + "\n\n"
+                        p.innerText = p.innerText + data.section3.text[1]
+                    })
+            </script>
+        </div>
+        <div class="section3-image"></div>
+    </div>
+
+    <div class="section-4">
+        <div class="section4-bg">
+            <div class="section4-head">
+                <h2 style="font-family: Montserrat;">Hollywood</h2>
+            </div>
+            <div class="section4-text" id="section4">
+                <script>
+                    fetch("data.json")
+                        .then(response => response.json())
+                        .then(data => {
+                            var p = document.querySelector("#section4")
+                            p.innerText = p.innerText + data.section4[0].text
+                        })
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="section4_2">
+        <div class="section4_second_part">
+            <div class="section4_second_part_head">
+                <h2 style="font-family: Montserrat;">Beaches</h2>
+            </div>
+            <div class="section4_second_text" id="section4_second">
+                <script>
+                    fetch("data.json")
+                        .then(response => response.json())
+                        .then(data => {
+                            var p = document.querySelector("#section4_second")
+                            p.innerText = p.innerText + data.section4[1].text
+                        })
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-5">
+        <footer class="section5-text">
+            <p>Tip the world over on its side and everything loose will land in Los Angeles</p>
+            <p>- Frank Lloyd Wright</p>
+            <div class="section5-author">
+                <p style="font-family: Montserrat; font-size: 16px; line-height: 2.3;">Designed By</p>
+                <p style="line-height: 2.0; font-size: 13px;">Syed Hameed Mohamed</p>
+                <a href="mailto:syedhame@usc.edu" style="text-decoration: none; font-size: 13px;color: white;">syedhame@usc.edu</a><br/>
+                <a href="tel: +1-213-675-2481" style="text-decoration: none; font-size: 13px;line-height: 0.0; color:white">(+1) 213 675 2481</a>
+            </div>
+        </footer>
+    </div>
+</body>
+
+<!-- CSS -->
+<style>
+    .page-background {
+        margin: 0;
+        background-color: #212529;
+    }
+    
+    .top-margin {
+        background-color: #833d48;
+        width: 1600px;
+        height: 2.5px;
+    }
+    
+    .nav-bar {
+        background-color: #12141c;
+        height: 100px;
+        width: 1600px
+    }
+    
+    .main-background {
+        background-image: url('images/rodeo-drive.jpg');
+        background-size: cover;
+        height: 300px;
+        width: 1600px;
+        padding-top: 80px;
+        text-align: center;
+        background-position: 35% 85%
+    }
+    
+    .page-title {
+        font-size: 40px;
+        font-family: Montserrat;
+        color: rgb(250, 144, 4);
+        margin: 75px;
+        text-shadow: 1px 0.5px 0px #ffffff;
+    }
+    
+    .ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        font-family: Comfortaa;
+        text-align: center;
+    }
+    
+    .li {
+        float: left;
+        display: block;
+        padding-right: 0px;
+        text-align: center;
+        color: white;
+        text-decoration: none;
+        font-family: Comfortaa;
+        margin-right: 120px;
+        margin-top: 35px;
+        font-size: 28px;
+        text-shadow: 1.3px 1.6px 0px rgb(250, 144, 4);
+    }
+    
+    .a {
+        color: white;
+        text-decoration: none;
+    }
+    
+    .a:hover {
+        color: rgb(250, 144, 4);
+        text-shadow: 1.3px 1.6px 0px rgb(255, 255, 255);
+    }
+    
+    .navbar {
+        width: 100%;
+        background-color: #555;
+        overflow: auto;
+    }
+    
+    .attractions {
+        float: left;
+        padding: 20px;
+        background-color: #12141a;
+        height: 450px;
+        width: 19%;
+        margin-left: 20px;
+    }
+    
+    .newsection {
+        float: left;
+        padding: 20px;
+        background-color: #12141a;
+        height: 640px;
+        width: 25%;
+        margin-left: 0px;
+        padding-left: 200px;
+        padding-top: 200px;
+        margin-right: -850px;
+        font-size: 17px;
+        font-family: Comfortaa;
+        color: white
+    }
+    
+    .newsection2 {
+        float: left;
+        padding: 20px;
+        background-color: rgb(237, 238, 243);
+        background-image: url('images/lasky.png');
+        background-size: cover;
+        height: 240px;
+        width: 25%;
+        margin-left: 70px;
+        font-size: 17px;
+        font-family: Comfortaa;
+        color: white
+    }
+    
+    .column {
+        flex: 33.33%;
+        padding: 5px;
+    }
+    
+    .row {
+        display: flex;
+        background-color: #212529;
+        height: 700px;
+        width: 1400px;
+        margin-top: 120px;
+        margin-left: 80px;
+    }
+    
+    .section3-background {
+        background-color: #12141a;
+        height: 640px;
+        width: 1600px;
+        margin-top: 0px;
+    }
+    
+    .section-4 {
+        height: 700px;
+        width: 1400px;
+        margin-top: 80px;
+    }
+    
+    .section-5 {
+        background-color: #12141a;
+        height: 220px;
+        width: 1600px;
+        margin-top: 20px;
+    }
+    
+    .section5-text {
+        float: left;
+        padding: 20px;
+        margin-left: 255px;
+        margin-top: 60px;
+        font-family: Comfortaa;
+        color: white;
+        width: 440px;
+        text-align: center;
+        font-size: 14px;
+    }
+    
+    .section5-author {
+        float: left;
+        padding: 20px;
+        margin-left: 500px;
+        margin-top: -170px;
+        font-family: Comfortaa;
+        color: white;
+        width: 440px;
+        text-align: center;
+    }
+    
+    .section4_2 {
+        margin-top: 0px;
+    }
+    
+    .section4-bg {
+        display: block;
+        float: left;
+        padding-right: 20px;
+        background-image: url('images/hollywood.jpg');
+        background-size: cover;
+        height: 195px;
+        width: 20%;
+        margin-left: 280px;
+        margin-top: 100px;
+    }
+    
+    .section4_second_part {
+        display: block;
+        float: left;
+        padding-right: 20px;
+        background-image: url('images/beach.jpg');
+        background-size: cover;
+        height: 195px;
+        width: 280px;
+        margin-left: 950px;
+        margin-top: -370px;
+    }
+    
+    .section4_second_part_head {
+        float: left;
+        padding: 20px;
+        margin-left: -155px;
+        margin-top: -40px;
+        font-family: Comfortaa;
+        color: white;
+        font-size: 16px;
+    }
+    
+    .section4-head {
+        float: left;
+        padding: 20px;
+        margin-left: 310px;
+        margin-top: -40px;
+        font-family: Comfortaa;
+        color: white;
+        font-size: 16px;
+    }
+    
+    .section4-text {
+        float: left;
+        padding: 20px;
+        margin-left: 310px;
+        margin-top: -40px;
+        font-family: Comfortaa;
+        color: white;
+        width: 643px;
+        text-align: justify;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .section4_second_text {
+        float: left;
+        padding: 20px;
+        margin-left: -690px;
+        margin-top: 30px;
+        font-family: Comfortaa;
+        color: white;
+        width: 640px;
+        text-align: justify;
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    
+    .section3-class {
+        float: left;
+        color: white;
+        margin-left: 280px;
+        margin-top: 200px;
+        padding-right: 850px;
+        text-align: justify;
+        font-family: Comfortaa;
+        font-size: 13px;
+        line-height: 1.5;
+    }
+    
+    .section3-image {
+        display: block;
+        float: left;
+        padding: 20px;
+        background-color: rgb(237, 238, 243);
+        background-image: url('images/lasky.png');
+        background-size: cover;
+        height: 250px;
+        width: 440px;
+        margin-left: 772px;
+        margin-top: -265px;
+        font-size: 17px;
+        font-family: Comfortaa;
+        color: white
+    }
+    
+    .center {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 20%;
+    }
+    
+    .text-section {
+        color: white;
+        margin-top: 20px;
+        font-size: 14px;
+        font-family: Comfortaa;
+        line-height: 1.4;
+    }
+</style>
+
+</html>
