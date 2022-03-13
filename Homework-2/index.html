@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<head>
+    <title>Blood Pressure Indicator</title>
+</head>
+
+<body style="text-align: center; margin-top: 100px;">
+    <h2 style="color: orange">Blood Pressure Indicator</h2><br>
+    <p style="color: orange">Fill out the form to get your Blood Pressure estimate!</p><br>
+
+    <form method="POST">
+        <label for="age">Age</label><br>
+        <input type="number" name="age" required step="1" placeholder="Enter age in years"><br><br>
+        <label for="weight">Weight</label><br>
+        <input type="number" name="weight" required step="1" placeholder="Enter weight in kg"><br><br>
+        <button style="background-color: blue; color: white" type="submit">Calculate</button><br><br>
+    </form>
+    <p>{{message}}</p>
+</body>
+
+</html>
